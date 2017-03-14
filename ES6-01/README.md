@@ -6,16 +6,16 @@
 - window 环境下，命名 `.babelrc.` 生成配置文件
 - 该文件来设置转码规则和插件，基本格式如下
   
-``babelrc
+```babelrc
 {
 	"preset":[],
 	"plugins":[]
 }
-``
+```
 
 - `preset` 字段设定转码规则，可以根据需要安装  
 
-``git
+```git
 # ES2015转码规则
 $ npm install --save-dev babel-preset-es2015
 
@@ -27,11 +27,11 @@ $ npm install --save-dev babel-preset-stage-0
 $ npm install --save-dev babel-preset-stage-1
 $ npm install --save-dev babel-preset-stage-2
 $ npm install --save-dev babel-preset-stage-3
-``
+```
 
 - 将这些规则加入 `.babelrc`  
 
-``babelrc
+```babelrc
 {
     "presets": [
       "es2015",
@@ -40,18 +40,19 @@ $ npm install --save-dev babel-preset-stage-3
     ],
     "plugins": []
 }
-``
+```
 
 - 以下所有Babel工具和模块的使用，都必须先写好 `.babelrc`
 
 ## 全局安装 `babel-cli`
 
-``git
+```git
 $ npm install --global babel-cli
-``
+```
 
 基本用法如下
-``git
+
+```git
 # 转码结果输出到标准输出
 $ babel example.js
 
@@ -69,15 +70,17 @@ $ babel src -d lib
 
 # -s 参数生成source map文件
 $ babel src -d lib -s
-``
+```
 
 ## 项目安装 `babel-cli`
-``git
+
+```git
 $ npm install --save-dev babel-cli
-``
+```
 
 配置 `package.json` ，将 `src文件夹` 编译到 `js` 文件夹
-``json
+
+```json
 {
   // ...
   "devDependencies": {
@@ -87,10 +90,10 @@ $ npm install --save-dev babel-cli
     "build": "babel src -d js"
   },
 }
-``
+```
 
 转码执行命令
 
-``git
+```git
 $ npm run build
-``
+```
