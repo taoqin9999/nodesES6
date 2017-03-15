@@ -18,7 +18,9 @@ console.log("b:" + b);
 ```javascript
 for(let i = 0; i < 10; i++){}
 console.log(i); // i is not defined
+```
 
+```javascript
 for(var j = 0; j < 10; j++){}
 console.log(j); // 10
 ```
@@ -31,7 +33,9 @@ for(var k = 0; k < 10; k++){
 	};
 }
 c[6](); // 10
+```
 
+```javascript
 var d = [];
 for(let l = 0; l < 10; l++){
 	d[l] = function(){
@@ -48,7 +52,9 @@ let命令改变了语法行为，它所声明的变量一定要在声明后使�
 ```javascript
 console.log(foo); //undefined
 var foo = 2; 
+```
 
+```javascript
 console.log(bar); //bar is not defined
 let bar = 2;
 ```
@@ -61,6 +67,7 @@ ES6明确规定，如果区块中存在let和const命令，这个区块对这些
 
 ```javascript
 var tmp = 123;
+
 if(true) {
 	tmp = "abc";
 	let tmp; //tmp is not defined
@@ -78,6 +85,7 @@ if(true){
 	tmp = 456;
 	console.log(tmp); //456
 }
+
 console.log(tmp);//abc
 ```
 
@@ -85,7 +93,9 @@ console.log(tmp);//abc
 
 ```javascript
 typeof x;
+
 let x; //x is not defined
+
 console.log(typeof x); //underfined
 ```
 
@@ -94,7 +104,9 @@ function bar0(x = y, y = 2){ // 死区，报错，提前声明
  	return [x,y];
 }
 bar0();
+```
 
+```javascript
 function bar1(x = 2, y = x){
 	return [x,y];
 }
@@ -115,7 +127,9 @@ function fn0(){
  	var a = 1;
 }
 fn0();//报错
+```
 
+```javascript
 function fn1(){
 let a = 10;
 let a = 1;
@@ -147,7 +161,9 @@ function f(){
 	}
 }
 f(); //underfined 变量提升，导致内层的tmp变量覆盖了外层的tmp变量
+```
 
+```javascript
 function f1(){
 	let n = 5;
 	if(true){
@@ -183,6 +199,7 @@ f1();
 (function(){
 	var tmp = 0;
 }());
+
 // 块级作用域写法
 {
 	let tmp = 0;
