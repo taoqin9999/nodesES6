@@ -6,6 +6,7 @@
     "babel-cli":"^6.24.0"
   },
   "scripts": {
-  	"build": "babel src -d js"
+  	"build": "babel src -d js",
+  	"script-name":"babel-node script.js"
   }
 }

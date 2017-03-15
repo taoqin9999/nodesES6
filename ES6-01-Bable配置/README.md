@@ -1,5 +1,7 @@
 原文链接：http://es6.ruanyifeng.com/
 
+# Bable配置
+
 ## 配置文件 `.babelrc`
 
 - 使用Bable的第一步，在项目根目录下新建并配置文件 `.babelrc`  
@@ -97,3 +99,20 @@ $ npm install --save-dev babel-cli
 ```git
 $ npm run build
 ```
+
+## babel-bode 
+
+改写 `package.json`
+
+```json
+{
+  "scripts": {
+    "script-name": "babel-node script.js"
+  }
+}
+```
+
+上面代码中，使用 `babel-node` 替代 `node` ，这样 `script.js` 本身就不用做任何转码处理。
+
+
+----------
