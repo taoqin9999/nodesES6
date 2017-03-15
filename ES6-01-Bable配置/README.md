@@ -1,6 +1,6 @@
 原文链接：http://es6.ruanyifeng.com/
 
-# Bable配置
+# Babel配置
 
 ## 配置文件 `.babelrc`
 
