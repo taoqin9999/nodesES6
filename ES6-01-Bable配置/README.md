@@ -116,3 +116,22 @@ $ npm run build
 
 
 ----------
+
+## 快速安装
+
+全局安装 `babel-cli`
+
+```git
+$ npm install --global babel-cli
+```
+复制文件夹中 `package.json` 与 `.bablelrc` 至项目目录，运行命令
+
+```git
+npm install
+```
+
+编译
+
+```git
+npm run build
+```
